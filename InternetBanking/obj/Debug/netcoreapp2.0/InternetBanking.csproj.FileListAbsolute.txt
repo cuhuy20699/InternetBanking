@@ -1,0 +1,7 @@
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.deps.json
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.runtimeconfig.json
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.runtimeconfig.dev.json
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.dll
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.csproj.CoreCompileInputs.cache
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfoInputs.cache
+d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfo.cs
