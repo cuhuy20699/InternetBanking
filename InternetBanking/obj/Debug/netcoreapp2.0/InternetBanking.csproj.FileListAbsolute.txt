@@ -5,3 +5,14 @@ d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\bin\Deb
 d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.csproj.CoreCompileInputs.cache
 d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfoInputs.cache
 d:\Documents\Visual Studio 2017\Projects\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfo.cs
+D:\Documents\github\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.deps.json
+D:\Documents\github\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.runtimeconfig.json
+D:\Documents\github\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.runtimeconfig.dev.json
+D:\Documents\github\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.dll
+D:\Documents\github\InternetBanking\InternetBanking\bin\Debug\netcoreapp2.0\InternetBanking.pdb
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.csprojResolveAssemblyReference.cache
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.csproj.CoreCompileInputs.cache
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfoInputs.cache
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.AssemblyInfo.cs
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.dll
+D:\Documents\github\InternetBanking\InternetBanking\obj\Debug\netcoreapp2.0\InternetBanking.pdb
