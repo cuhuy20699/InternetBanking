@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace InternetBanking
 {
@@ -6,7 +7,8 @@ namespace InternetBanking
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.OutputEncoding = Encoding.UTF8;
+              
         }
     }
 }
