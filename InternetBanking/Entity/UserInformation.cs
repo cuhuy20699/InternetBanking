@@ -6,7 +6,7 @@ namespace InternetBanking.Entity
 {
     class UserInformation
     {
-        private int BankNumber;
+        private string BankNumber;
         private string Salt;
         private int BankBalance;
         private string FullName;
