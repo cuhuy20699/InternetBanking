@@ -55,7 +55,7 @@ namespace InternetBanking.Security
 
         public int BankNumberRandom()
         {
-            int BankNumber = Int32.Parse(RandomString1(10));
+            int BankNumber = Int32.Parse(RandomString1(15));
             return BankNumber;
         }
     }
