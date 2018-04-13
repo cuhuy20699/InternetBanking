@@ -57,4 +57,29 @@ namespace InternetBanking.Security
         {
             return RandomString1(15);
         }
+        public string TransactionCode()
+        {
+            const string tranCodeS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            const string tranCodeI = "0123456789";
+
+            StringBuilder builder1 = new StringBuilder();
+            StringBuilder builder2 = new StringBuilder();
+
+            for (int i = 0; i < 3; i++)
+            {
+                var character1 = tranCodeS[random.Next(0, tranCodeS.Length)];
+                builder1.Append(character1);
+                var character2 = tranCodeI[random.Next(0, tranCodeI.Length)];
+                builder2.Append(character2);
+            }
+
+            string transcode1 = builder1.ToString();
+
+            string transcode2 = builder2.ToString();
+
+            string code = "TEC" + transcode2 + transcode1;
+
+            return code;
+        }
     }
+}
