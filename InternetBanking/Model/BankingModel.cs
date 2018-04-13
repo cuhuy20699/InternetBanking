@@ -8,79 +8,14 @@ namespace InternetBanking.Model
     {
         private MySqlTransaction transaction;
         private MySqlConnection connection;
-        private string server;
-        private string database;
-        private string uid;
-        private string password;
 
-        //Constructor
-        public BankingModel()
-        {
-            Initialize();
-        }
-
-        //Initialize values
-        private void Initialize()
-        {
-            server = "localhost";
-            database = "MyDatabase";
-            uid = "root";
-            password = "";
-            string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
-
-            connection = new MySqlConnection(connectionString);
-        }
-
-        public bool OpenConnection()
-        {
-            try
-            {
-                connection.Open();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                //When handling errors, you can your application's response based 
-                //on the error number.
-                //The two most common error numbers when connecting are as follows:
-                //0: Cannot connect to server.
-                //1045: Invalid user name and/or password.
-                switch (ex.Number)
-                {
-                    case 0:
-                        Console.WriteLine("error");
-                        break;
-
-                    case 1045:
-                        Console.WriteLine("error");
-                        break;
-                }
-                return false;
-            }
-        }
-
-        //Close connection
-        public bool CloseConnection()
-        {
-            try
-            {
-                connection.Close();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine("error");
-                return false;
-            }
-        }
 
         public int CheckMoney(string username)
         {
+            connection = ConnectionHelper.GetDbConnection();
             string bankNumber;
             string query = "SELECT " + username + ", bankNumber FROM acounts,userinformation WHERE accounts.id = userinformation.accountId ";
-            OpenConnection();
+            connection.Open();
             MySqlCommand cmd1 = new MySqlCommand(query, connection);
             MySqlDataReader dataReader1 = cmd1.ExecuteReader();
             bankNumber = dataReader1["bankNumber"] + "";
@@ -91,7 +26,7 @@ namespace InternetBanking.Model
             int money = Convert.ToInt32(dataReader2["money"]);
             Console.WriteLine("Số tiền trong tài khoản quý khách hiện nay là: " + money);
             dataReader2.Close();
-            CloseConnection();
+            connection.Close();
             return money;
         }
 
