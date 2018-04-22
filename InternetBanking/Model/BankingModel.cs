@@ -163,5 +163,44 @@ namespace InternetBanking.Model
                 throw;
             }
         }
+
+        public void transactionlog(string username)
+        {
+            List<Transactionlog> lt = new List<Transactionlog>();
+            int bankNumber = GetBankNumber(username);
+            connection = ConnectionHelper.GetDbConnection();
+            string query = "SELECT* FROM transactionlog WHERE bankNumber =" + bankNumber;
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            try
+            {
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    string transactionCode = dataReader["transactionCode"] + "";
+                    string transactionTitle = dataReader["transactionTitle"] + "";
+                    int money = Convert.ToInt32(dataReader["money"]);
+                    long datetime = Convert.ToInt32(dataReader["transactionDate"]);
+                    int receiveBankNumber = Convert.ToInt32(dataReader["receiveBankNumber"]);
+                    string transactionNote = dataReader["transactionNote"] + "";
+                    Transactionlog transactionlog = new Transactionlog(transactionCode, transactionTitle, money, datetime, receiveBankNumber, transactionNote);
+                    lt.Add(transactionlog);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+                throw;
+            }
+            foreach (Transactionlog transactionlog in lt)
+            {
+                DateTime d = new DateTime(transactionlog.TransactionDate1);
+                string da = d.ToString("dd/MM/yyyy");
+                Console.WriteLine("Lịch sử giao dịch: ");
+                Console.WriteLine("TransactionCode: " + transactionlog.TransactionCode1 + ", TransactionTitle: " + transactionlog.TransactionTitle1 + ",BankNumber: " + bankNumber + ",Money: " + transactionlog.Money1 + ",TransactionDate: " + da + ".");
+            }
+            {
+
+            }
+        }
     }
 }
